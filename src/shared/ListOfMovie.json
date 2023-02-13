@@ -1,51 +1,35 @@
-[
-  {
-    "id": 1,
-    "image": "assets/images/avatar.jpg",
-    "title": "Avatar",
-    "Year": "2009",
-    "infor": "Phim được lấy bối cảnh giữa thế kỉ 22, Con nguời khai thác vô tình điều này lại đem lại sự đe dọa tới lãnh thổ tộc người Navi ở Pandora. Để tìm hiểu môi trường sinh thái của người Navi ở Pandora, các nhà khoa học hoạt động liên kết thần kinh con người với thân xác người lai Navi gọi là Avatar. Jake Sully, chàng lính thủy đánh bộ bị liệt hai chân được chọn đảm nhiệm sứ mệnh khám phá này. Thế nhưng, anh lại quyết định bảo vệ Pandora và chiến đấu với loài người."
+{
+  "genre": "Movies",
+  "list": [
+    {
+      "id": 1,
+      "image": "assets/images/batman.jpg",
+      "title": "The Dark Knight",
+      "Year": "2008",
+      "director": "Christopher Nolan",
+      "time" : 150,
+      "resolution": "hd",
+      "information": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
   },
   {
-    "id": 2,
-    "image": "assets/images/endgame.jpg",
-    "title": "Avengers: End Game",
-    "Year": "2019",
-    "infor": "Avengers: End Game là phần thứ tư của loạt phim Avengers. Phần phim kể tiếp câu chuyện sau cú búng tay của Thanos khiến 1 nửa dân số vũ trụ bị bay màu. Tại End Game, các siêu anh hùng lần nữa tập hợp với kế hoạch du hành thời gian bằng cỗ máy lượng tử để thu thập các viên đá vô cực nhằm đảo ngược cú búng tay. Nhưng mọi chuyện lại không đơn giản như thế khi mà Thanos ở dòng thời gian này đã phát hiện kế hoạch của họ, và thế là trận chiến chống lại phe phản diện Thanos của nhóm liên minh siêu anh hùng lại bắt đầu."
+      "id": 2,
+      "image": "assets/images/ring.jpg",
+      "title": "The Lord of the Rings: The Two Towers",
+      "Year": "2002",
+      "director": "Peter Jackson",
+      "time" : 180,
+      "resolution": "hd",
+      "information": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard."
   },
   {
-    "id": 11,
-    "image": "assets/images/post-5.jpg",
-    "title": "The Suicide Squad",
-    "Year": "2021",
-    "infor": "Supervillains Harley Quinn, Bloodsport, Peacemaker, and a collection of nutty cons at Belle Reve prison join the super-secret, super-shady Task Force X as they are dropped off at the remote, enemy-infused island of Corto Maltese."
-},
-{
-    "id": 12,
-    "image": "assets/images/post-8.jpg",
-    "title": "Rumble",
-    "Year": "2021",
-    "infor": "In a world where monster wrestling is a global sport and monsters are superstar athletes, teenage Winnie seeks to follow in her father's footsteps by coaching a loveable underdog monster into a champion."
-},
-{
-    "id": 3,
-    "image": "assets/images/titanic.jpg",
-    "title": "Titanic",
-    "Year": "1997",
-    "infor": "Chuyện phim kể về cô tiểu thư giàu có Rose đem lòng yêu chàng họa sĩ nghèo Jack, họ vô tình gặp nhau trên con tàu Titanic. Hai người xuất thân từ hai tầng lớp khác nhau, nhưng đôi khi tình yêu cũng chẳng để tâm đến điều này. Họ gặp nhau trên chuyến tàu định mệnh rồi trao cho nhau tình yêu của mình. Khi thảm họa ập đến, Jack nhường lại cơ hội sống cho Rose. Từ đó, những ký ức buồn vui về Jack đã đi theo Rose đến suốt cả cuộc đời."
-},  
-{
-    "id": 4,
-    "image": "assets/images/starwars.jpg",
-    "title": "Star Wars: The Force Awakens",
-    "Year": "2015",
-    "infor": "Nội dung phim đưa khán giả theo chân ba nhân vật Rey, Finn và Poe Dameron trong cuộc tìm kiếm hiệp sĩ Jedi cuối cùng, Luke Skywalker. Lấy bối cảnh 30 năm sau sự trở lại của Jedi, chúng ta cũng được chứng kiến sự quay lại từ những nhân vật quen thuộc trong phần trước bắt đầu cuộc hành trình thu thập mẫu vật ở một hành tinh lạ. Tuy nhiên, họ không thể lường trước được là kẻ thù cực kỳ nguy hiểm chỉ đợi được đánh thức để tàn phá."
-},
-{
-    "id": 5,
-    "image": "assets/images/infinitywar.jpg",
-    "title": "Avengers: Infinity War",
-    "Year": "2018",
-    "infor": "Trong phầm phim Avengers: Infinity War, nhóm siêu anh hùng đã phải đụng độ với kẻ phản diện Thanos. Đối diện với kẻ thù mạnh với âm mưu xóa nửa dân số trong vũ trụ của Thanos, biệt đội Avengers cùng các đồng minh đã hợp lực với nhau để chống lại nhưng sự hy sinh và tổn thất từ cuộc chiến để lại là điều không thể tránh khỏi."
+      "id": 3,
+      "image": "assets/images/tranformer.jpg",
+      "title": "Transformers: Age of Extinction",
+      "Year": "2019",
+      "director": "Michael Bay",
+      "time" : 150,
+      "resolution": "hd",
+      "information": "When humanity allies with a bounty hunter in pursuit of Optimus Prime, the Autobots turn to a mechanic and his family for help."
+  }
+  ]
 }
-]

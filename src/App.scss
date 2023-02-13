@@ -5,19 +5,12 @@ $inside-color: rgb(48, 47, 47);
 * {
   box-sizing: border-box;
 }
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 input::placeholder {
   color: rgb(168, 168, 168);
   font-size: medium;
 }
 .home {
+  display: flex;
   background-color: $background-color;
 }
 img {
@@ -26,7 +19,6 @@ img {
   object-fit: cover;
   object-position: center;
   border-radius: inherit;
-  animation: fade-in 1s;
 }
 .material-icons {
   font-family: "Material Icons";
@@ -116,16 +108,16 @@ img {
   }
 }
 .nagivation {
-  position: fixed;
-  top: 150px;
-  left: 3%;
-  width: 17%;
-  height: 500px;
-  z-index: 1;
+  float: left;
+  height: inherit;
+  width: 10%;
+  transition: 500ms;
   nav {
-    display: block;
-    position: relative;
-    height: 100%;
+    top: 200px;
+    left: 1%;
+    width: 5%;
+    height: 500px;
+    position: fixed;
     background-color: $inside-color;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -133,30 +125,32 @@ img {
     border-left: 3px solid $color-logo;
     border-top: 3px solid $color-logo;
     z-index: 2;
+    transition: 500ms;
     ul {
+      padding-left: 20%;
       position: relative;
       height: 100%;
       list-style-type: none;
       margin: 0px;
       display: block;
-      padding-top: 10%;
       background-color: rgb(0, 0, 0, 0);
       li {
         width: 100%;
         height: calc(100% / 6);
         display: flex;
-        transition-duration: 200ms;
-        padding-left: 5%;
+        transition: 200ms;
         .nav {
           margin-top: 20px;
           font-size: xx-large;
           color: white;
         }
         .text {
+          visibility: hidden;
           font-size: x-large;
           color: white;
           padding-top: 17px;
           padding-left: 13%;
+          transition-delay: 200ms;
         }
       }
       li:hover {
@@ -165,14 +159,24 @@ img {
     }
   }
 }
+.nagivation:hover {
+  width: 400px;
+  nav {
+    width: 15%;
+    .text {
+      visibility: visible;
+    }
+  }
+}
 .body {
-  padding: 150px 5% 0px 25%;
-  background-color: $background-color;
-  width: 100%;
+  margin-top: 150px;
+  width: 80%;
   .banner {
+    padding-left: 5%;
+    padding-right: 5%;
     width: 100%;
     position: relative;
-    height: 450px;
+    height: 500px;
     margin-top: 50px;
     .container {
       width: 100%;
@@ -191,7 +195,7 @@ img {
       transition: 200ms;
       .button-place {
         position: relative;
-        top: 400px;
+        top: 450px;
         text-align: right;
         margin-right: 5%;
         .button {
@@ -230,7 +234,8 @@ img {
     .films-list {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      margin-top: 40px;
+      grid-template-rows: repeat( 1, 500px);
+      margin: 40px 5% 5%;
       .card {
         margin: 20px;
         position: relative;
@@ -300,6 +305,7 @@ img {
     }
   }
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -310,6 +316,7 @@ img {
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
+  z-index: 1;
 }
 .overlay:target {
   visibility: visible;
@@ -358,60 +365,50 @@ img {
   overflow-y: scroll;
   position: relative;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 912px) {
   .body .films-container .films-list {
-    display: grid;
     grid-template-columns: 1fr 1fr;
   }
-}
-@media screen and (max-width: 1024px) {
-  .nagivation nav ul li .text {
-    display: none;
+  .header {
+    grid-template-columns: 1fr 3fr 1fr;
+    .logo-place{
+      visibility: hidden;
+    }
+    .login-user {
+      visibility: hidden;
+    }
   }
   .nagivation {
-    width: 12%;
-  }
-  .body {
-    padding-left: 20%;
+    width: 0px;
+    nav {
+      top: 20px;
+      border: 0px;
+      background-color: rgb(0, 0, 0, 0);
+      left: 5%;
+      li {
+        visibility: hidden;
+      }
+      li:first-child {
+        visibility: visible;
+      }
+      pointer-events:none;
+    }
   }
   .popup {
-    width: 80%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 600px) {
-  .nagivation {
-    left: 0px;
-    nav {
-      visibility: hidden;
-      .ul-nav {
-        padding-left: 2%;
-      }
-    }
-    nav:hover {
-      visibility: visible;
-    }
-  } 
-  .body {
-    padding-left: 5%; 
-    padding-top: 100px;
-  }
   .body .films-container .films-list {
-    display: grid;
     grid-template-columns: 1fr;
   }
-  .banner {
-    display: none;
-  }
   .header {
-    grid-template-columns: 1fr ;
-    .logo-place {
+    grid-template-columns: 1fr;
+    .logo-place{
       display: none;
     }
     .login-user {
       display: none;
     }
-  }
-  .popup {
-    width: 90%;
   }
 }

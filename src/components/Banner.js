@@ -1,7 +1,7 @@
 import React from "react";
 // let banners = require("../shared/ListOfMovie.json");
 import { useContext } from 'react'
-import { SwitchContext } from './CustomHook'
+import { SwitchContext } from './SwitchContext'
 
 export default function Banner() {
   const { index, banners, back, next} = useContext(SwitchContext)
