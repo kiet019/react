@@ -3,7 +3,7 @@ import { BrowserRouter as router  } from "react-router-dom";
 let topFilms = require("../shared/ListOfTopFilms.json");
 
 export default function TopFilm() {
-  const [film, setFilm] = useState(0)
+  const [film, setFilm] = useState([])
   return (
     <div className="films-container">
       <div className="title">TOP FILMS</div>

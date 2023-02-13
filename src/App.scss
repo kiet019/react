@@ -54,7 +54,6 @@ img {
   .logo-place {
     position: relative;
     .switch-mode {
-
       margin-right: 20%;
     }
     .logo {
@@ -120,17 +119,20 @@ img {
   position: fixed;
   top: 150px;
   left: 3%;
-  width: 14%;
+  width: 17%;
   height: 500px;
-  background-color: $inside-color;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-left: 3px solid $color-logo;
-  border-top: 3px solid $color-logo;
+  z-index: 1;
   nav {
+    display: block;
     position: relative;
     height: 100%;
+    background-color: $inside-color;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-left: 3px solid $color-logo;
+    border-top: 3px solid $color-logo;
+    z-index: 2;
     ul {
       position: relative;
       height: 100%;
@@ -164,17 +166,17 @@ img {
   }
 }
 .body {
-  padding: 150px 5% 0px 20%;
+  padding: 150px 5% 0px 25%;
   background-color: $background-color;
   width: 100%;
   .banner {
     width: 100%;
     position: relative;
-    height: 500px;
+    height: 450px;
     margin-top: 50px;
     .container {
       width: 100%;
-      height: 500px;
+      height: inherit;
       position: relative;
       border: 2px solid $color-logo;
       border-radius: 60px;
@@ -184,12 +186,12 @@ img {
     }
     .context {
       position: relative;
-      height: 499px;
+      height: inherit;
       border-radius: inherit;
       transition: 200ms;
       .button-place {
         position: relative;
-        top: 450px;
+        top: 400px;
         text-align: right;
         margin-right: 5%;
         .button {
@@ -314,11 +316,12 @@ img {
   opacity: 1;
 }
 .popup {
-  margin: 200px auto;
+  margin: 150px auto;
   padding: 5px;
   background: #fff;
   border-radius: 5px;
   width: 30%;
+  height: 500px;
   position: relative;
   transition: all 5s ease-in-out;
   background-color: $inside-color;
@@ -326,11 +329,12 @@ img {
 }
 .popup img {
   width: 100%;
+  height: 300px;
 }
 .popup h2 {
-  margin-top: 0;
   color: white;
   font-family: Tahoma, Arial, sans-serif;
+  position: relative;
 }
 .popup .close {
   position: absolute;
@@ -352,4 +356,62 @@ img {
   color: white;
   max-height: 30%;
   overflow-y: scroll;
+  position: relative;
+}
+@media screen and (max-width: 1280px) {
+  .body .films-container .films-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .nagivation nav ul li .text {
+    display: none;
+  }
+  .nagivation {
+    width: 12%;
+  }
+  .body {
+    padding-left: 20%;
+  }
+  .popup {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nagivation {
+    left: 0px;
+    nav {
+      visibility: hidden;
+      .ul-nav {
+        padding-left: 2%;
+      }
+    }
+    nav:hover {
+      visibility: visible;
+    }
+  } 
+  .body {
+    padding-left: 5%; 
+    padding-top: 100px;
+  }
+  .body .films-container .films-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .banner {
+    display: none;
+  }
+  .header {
+    grid-template-columns: 1fr ;
+    .logo-place {
+      display: none;
+    }
+    .login-user {
+      display: none;
+    }
+  }
+  .popup {
+    width: 90%;
+  }
 }

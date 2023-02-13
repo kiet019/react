@@ -5,11 +5,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import { ThemeProvider } from './components/ThemeContext';
+import { SwitchProvider } from "./components/CustomHook";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ThemeProvider>
+      <SwitchProvider>
      <App />
+     </SwitchProvider>
     </ThemeProvider>
   </React.StrictMode>
 );

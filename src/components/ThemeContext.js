@@ -5,7 +5,7 @@ const themes = {
     backgroundColor: "rgb(17,17,17)",
   },
   light: {
-    backgroundColor: "rgba(0,0,0,0)",
+    backgroundColor: "white",
   },
 };
 const initialState = {

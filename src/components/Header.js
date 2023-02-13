@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { ThemeContext } from './ThemeContext'
 
 export default function Header() {
-  const { theme, toggle, dark } = useContext(ThemeContext)
+  const { theme, toggle} = useContext(ThemeContext)
   return (
     <div className="header" style={{ backgroundColor: theme.backgroundColor}}>
       <div className="logo-place">
