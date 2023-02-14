@@ -8,7 +8,7 @@ export default function Banner() {
   return (
     <div className="banner">
       <div className="container">
-        <img src={banners[index].image} />
+        <img src={banners[index].image} alt=""/>
         <div className="context">
           <div className="button-place">
             <button className="button" onClick={back}>

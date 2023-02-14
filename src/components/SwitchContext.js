@@ -13,7 +13,7 @@ function SwitchProvider({ children }) {
     if(index <=0 || index>= banners.length-1) {
       setIndex(1);
     }
-  }, [index]);
+  }, [index, banners.length]);
   const back = () => {
     setIndex(index-1)
   };

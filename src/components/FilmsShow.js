@@ -6,9 +6,9 @@ export default function FilmsShow({ Films }) {
     <div className="films-container">
       <div className="title">{Films.genre}</div>
       <div className="films-list">
-        {Films.list.map((film) => (
-          <div className="card">
-            <img src={film.image} />
+        {Films.list.map((film, index) => (
+          <div className="card" key={index}>
+            <img src={film.image} alt={index}/>
             <div className="overload">
               <button className="button" onClick={() => {setFilm(film)}}>
                 <a href="#popup1" id="openPopUp"><span class="material-icons detail">more_vert</span></a>
@@ -25,9 +25,9 @@ export default function FilmsShow({ Films }) {
       </div>
       <div id="popup1" className="overlay">
         <div className="popup">
-          <img src={film.image}/>
+          <img src={film.image} alt=""/>
           <h2>{film.title}</h2>
-          <a className="close" href="#">&times;</a>
+          <a className="close" href="/">&times;</a>
           <div className="content">
             {film.information}
           </div>
