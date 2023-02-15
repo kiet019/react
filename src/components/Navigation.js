@@ -7,31 +7,35 @@ export default function Navigation() {
         <nav>
           <ul className="ul-nav">
               <li>
-                <span class="material-icons nav">menu</span>
+                <span className="material-icons nav">menu</span>
                 <div className="text">Menu</div>
               </li>
             <Link to="/">
             <li>
-              <span class="material-icons nav">home</span>
+              <span className="material-icons nav">home</span>
               <div className="text">Home</div>
             </li>
             </Link>
+            <Link to="/films/Series">
             <li>
-              <span class="material-icons nav">live_tv</span>
+              <span className="material-icons nav">live_tv</span>
               <div className="text">Series</div>
             </li>
-            <Link to="/body1">
+            </Link>
+            <Link to="/films/Movies">
             <li>
-              <span class="material-icons nav">movie</span>
+              <span className="material-icons nav">movie</span>
               <div className="text">Movies</div>
             </li>
             </Link>
+            <Link to="/contact">
             <li>
-              <span class="material-icons nav">settings</span>
-              <div className="text">Setting</div>
+              <span className="material-icons nav">contact_support</span>
+              <div className="text">Contact</div>
             </li>
+            </Link>
             <li>
-              <span class="material-icons nav">manage_accounts</span>
+              <span className="material-icons nav">manage_accounts</span>
               <div className="text">Account</div>
             </li>
           </ul>

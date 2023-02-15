@@ -1,14 +1,18 @@
-import React from "react";
-import Header from "./Header";
-import Navigation from "./Navigation";
-import Bodys from "./Bodys";
+import React, { useEffect } from 'react'
+import Banner from './Banner'
+import FilmsShow from './FilmsShow'
+let ListOfFilms = require("../shared/ListOfFilms.json");
 
 export default function Home() {
+  useEffect(() => {
+		window.scrollTo(0,0)
+	})
   return (
-      <div className="home">
-        <Header />
-        <Navigation />
-        <Bodys/>
-      </div>
-  );
+    <div className='home'>
+        <Banner/>
+        {ListOfFilms.map((Films) => (
+          <FilmsShow Films={Films}/>
+        ))}
+    </div>
+  )
 }
