@@ -7,6 +7,7 @@ import { ThemeProvider } from './components/ThemeContext';
 import { SwitchProvider } from "./components/SwitchContext";
 import { BrowserRouter } from "react-router-dom";
 
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

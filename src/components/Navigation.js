@@ -6,7 +6,7 @@ export default function Navigation() {
       <div className="navigation">
         <nav>
           <ul className="ul-nav">
-              <li>
+              <li className="first">
                 <span className="material-icons nav">menu</span>
                 <div className="text">Menu</div>
               </li>
