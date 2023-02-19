@@ -18,7 +18,7 @@ function SwitchProvider({ children }) {
   useEffect(() => {
     const interval = setInterval(() => {
         setIndex(prevIndex => (prevIndex + 1) % banners.length);
-    }, 2000);
+    }, 5000);
 
     return () => clearInterval(interval);
 }, [banners.length]);

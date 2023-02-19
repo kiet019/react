@@ -2,7 +2,7 @@
 $color-logo: rgb(184, 4, 4);
 $background-color: rgb(17, 17, 17);
 $inside-color: rgb(48, 47, 47);
-.news{
+.news {
   width: 90%;
   height: fit-content;
   margin-top: 120px;
@@ -27,7 +27,8 @@ $inside-color: rgb(48, 47, 47);
       padding-top: 10px;
     }
     .card-content {
-      padding: 0px 0px 0px 10%  ;
+      padding: 0px 0px 0px 10%;
+      text-align: justify;
     }
     .card-action {
       display: none;
@@ -92,13 +93,16 @@ $inside-color: rgb(48, 47, 47);
     ::placeholder {
       padding: 5px;
     }
-    #Textarea-68, #TextInput-132, #Textarea-146 {
+    #Textarea-68,
+    #TextInput-132,
+    #Textarea-146 {
       background-color: rgb(0, 0, 0, 0);
       border-bottom: 2px solid white;
       color: white;
       box-shadow: none;
     }
-    label[for="Textarea-68"], [for="TextInput-132"] {
+    label[for="Textarea-68"],
+    [for="TextInput-132"] {
       color: white;
       font-size: medium;
     }
@@ -205,11 +209,12 @@ img {
     top: 150px;
     left: 3%;
     width: 5%;
-    height: 500px;
+    height: 700px;
     position: fixed;
     background-color: $inside-color;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     border-left: 3px solid $color-logo;
     border-top: 3px solid $color-logo;
     z-index: 2;
@@ -228,7 +233,7 @@ img {
         width: 100%;
         display: flex;
         transition: 200ms;
-        height: calc(495px/6);
+        height: calc(495px / 7);
         .text {
           visibility: hidden;
           font-size: x-large;
@@ -275,17 +280,75 @@ img {
     height: 500px;
     margin-top: 50px;
     .container {
+      max-width: 10000px;
       width: 100%;
       height: inherit;
       position: relative;
       border: 2px solid $color-logo;
       border-radius: 60px;
       opacity: 1;
+      .video {
+        display: block;
+        color: rgb(0, 0, 0, 0);
+        position: absolute;
+        left: 75%;
+        top: 25%;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid white;
+        box-shadow: 1px 1px 12px white;
+        .circle {
+          margin: 0px;
+          position: absolute;
+          width: 130px;
+          height: 130px;
+          border-radius: 50%;
+          box-shadow: -5px -5px 12px $color-logo;
+          animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+        .play {
+          position: absolute;
+          font-size: 70px;
+          z-index: 1;
+          color: $color-logo;
+        }
+      }
       img {
         position: absolute;
       }
     }
     .context {
+      position: relative;
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0)
+      );
+      .title {
+        padding-top: 100px;
+        text-align: center;
+        width: 30%;
+        color: white;
+        font-size: 30px;
+        font-weight: 900;
+        margin-bottom: 5%;
+      }
+      .infor {
+        text-align: justify;
+        width: 25%;
+        padding-left: 5%;
+        color: white;
+        font-size: medium;
+      }
       position: relative;
       height: inherit;
       border-radius: inherit;
@@ -303,7 +366,6 @@ img {
       }
     }
     .context:hover {
-      background-color: rgba(0, 0, 0, 0.2);
       .button {
         visibility: visible;
         position: relative;
@@ -464,8 +526,8 @@ img {
 .footer {
   background-color: #333;
   color: #fff;
-  padding: 40px 0;
-
+  padding: 40px 0px;
+  height: 200px;
   .footer-content {
     .footer-links {
       margin-right: 30px;
@@ -506,6 +568,11 @@ img {
       font-size: 18px;
       margin-right: 10%;
     }
+  }
+  a {
+    top: 600px;
+    left: 60%;
+    position: relative;
   }
 }
 @media screen and (max-width: 1280px) {
