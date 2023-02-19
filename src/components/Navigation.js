@@ -34,10 +34,12 @@ export default function Navigation() {
               <div className="text">Contact</div>
             </li>
             </Link>
+            <Link to="/news">
             <li>
-              <span className="material-icons nav">manage_accounts</span>
-              <div className="text">Account</div>
+              <span className="material-icons nav">feed</span>
+              <div className="text">News</div>
             </li>
+            </Link>
           </ul>
         </nav>
       </div>

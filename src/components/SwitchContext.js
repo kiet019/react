@@ -14,6 +14,14 @@ function SwitchProvider({ children }) {
       setIndex(1);
     }
   }, [index, banners.length]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+        setIndex(prevIndex => (prevIndex + 1) % banners.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+}, [banners.length]);
   const back = () => {
     setIndex(index-1)
   };

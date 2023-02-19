@@ -1,5 +1,4 @@
 import React from "react";
-// let banners = require("../shared/ListOfMovie.json");
 import { useContext } from 'react'
 import { SwitchContext } from './SwitchContext'
 

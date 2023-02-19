@@ -6,7 +6,9 @@ import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from './components/ThemeContext';
 import { SwitchProvider } from "./components/SwitchContext";
 import { BrowserRouter } from "react-router-dom";
-
+// eslint-disable-next-line
+import M from 'materialize-css'
+import 'materialize-css/dist/css/materialize.min.css'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

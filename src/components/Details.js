@@ -21,7 +21,7 @@ export default function Details() {
     <div className="details">
       <img src={"../../" + film.image} alt=""/>
       <div className="content">
-        <h2>Name: {film.title}</h2>
+        <h3>Name: {film.title}</h3>
         <div className="text year">Year: {film.Year}</div>
         <div className="text director">Director: {film.director}</div>
         <div className="text time_reso">

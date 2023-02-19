@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <div className='home'>
         <Banner/>
-        {ListOfFilms.map((Films) => (
-          <FilmsShow Films={Films}/>
+        {ListOfFilms.map((Films, index) => (
+          <FilmsShow Films={Films} key={index}/>
         ))}
     </div>
   )
