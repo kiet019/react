@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Icon } from "react-materialize";
 import { useParams } from "react-router-dom";
+import ModalCase from "./ModalCase";
 let ListOfFilms = require("../shared/ListOfFilms.json");
 
 export default function Details() {
@@ -18,7 +19,7 @@ export default function Details() {
   });
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, [isOpen]);
   return (
     <div className="details">
       <img src={"../../" + film.image} alt="" />
@@ -44,6 +45,7 @@ export default function Details() {
         >
           <Icon>ondemand_video</Icon>
         </a>
+        {isOpen && <ModalCase setIsOpen={setIsOpen} film={film} />}
     </div>
   );
 }

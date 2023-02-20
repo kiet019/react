@@ -7,10 +7,10 @@ export default function Footer() {
         <div className="container">
           <div className="footer-content">
             <div className="footer-links">
-              <Link to="/">Trang chủ</Link>
-              <Link to="/about">Về chúng tôi</Link>
-              <Link to="/">Dịch vụ</Link>
-              <Link to="/">Liên hệ</Link>
+              <Link to="/">Home Page</Link>
+              <Link to="/about">About Us</Link>
+              <Link to="/">Service</Link>
+              <Link to="/">Contact</Link>
             </div>
           </div>
         </div>

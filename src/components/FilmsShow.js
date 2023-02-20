@@ -10,7 +10,7 @@ export default function FilmsShow({ Films }) {
             <img src={"../" + film.image} alt={film.id}/>
             <div className="overload" >
               <button className="button">
-                <a href={"/details/" + Films.ms + "/" + film.id} ><span  className="material-icons detail">play_circle</span></a>
+                <a href={"/details/" + Films.ms + "/" + film.id} ><span  className="material-icons detail">play_arrow</span></a>
               </button>
             </div>
             <div className="content" >

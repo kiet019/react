@@ -9,7 +9,7 @@ export default function Banner() {
       <div className="container">
         <img src={banners[index].image} alt="" />
          {/* eslint-disable-next-line  */}
-        <a className="video" href="https://www.youtube.com/watch?v=l-WSY4jUcT4" target="_blank">
+        <a className="video" href={banners[index].trailer} target="_blank">
           <div className="circle"></div>
           <span className="material-icons play">play_arrow</span>
         </a>
