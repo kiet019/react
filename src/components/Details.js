@@ -39,13 +39,14 @@ export default function Details() {
           {film.information}
         </div>
       </div>
+      {/* eslint-disable-next-line */}
       <a
-          onClick={() => setIsOpen(true)}
-          className="btn-floating halfway-fab waves-effect waves-light red"
-        >
-          <Icon>ondemand_video</Icon>
-        </a>
-        {isOpen && <ModalCase setIsOpen={setIsOpen} film={film} />}
+        onClick={() => setIsOpen(true)}
+        className="btn-floating halfway-fab waves-effect waves-light red"
+      >
+        <Icon>ondemand_video</Icon>
+      </a>
+      {isOpen && <ModalCase setIsOpen={setIsOpen} film={film} />}
     </div>
   );
 }
