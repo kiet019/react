@@ -160,6 +160,7 @@ img {
       color: white;
       margin-bottom: 0px;
       height: 60px;
+      background-color: $inside-color;
     }
     span {
       border-top-right-radius: 70px;
@@ -172,6 +173,7 @@ img {
       padding-top: 15px;
       color: $color-logo;
       font-size: xx-large;
+      background-color: $inside-color;
     }
   }
  .login-user {
@@ -204,7 +206,7 @@ img {
       padding: 0px;
       iframe {
         width: 98%;
-        height: 450px;
+        height: 400px;
         margin: 1%;
       }
     }
@@ -335,7 +337,7 @@ img {
         align-items: center;
         border-radius: 50%;
         border: 1px solid white;
-        box-shadow: 1px 1px 12px white;
+        box-shadow: 0px 0px 12px white;
         .circle {
           margin: 0px;
           position: absolute;
