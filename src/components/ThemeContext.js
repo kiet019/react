@@ -9,8 +9,8 @@ const themes = {
   },
 };
 const initialState = {
-  dark: false,
-  theme: themes.light,
+  dark: true,
+  theme: themes.dark,
   toggle: () => {},
 };
 const ThemeContext = React.createContext(initialState);

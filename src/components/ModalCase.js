@@ -17,7 +17,7 @@ export default function ModalCase({ setIsOpen, film }) {
             ></iframe>
         </div>
         <div className="modal-footer">
-          <button className="download" ><span className="material-icons">download</span>Download</button>
+          <button className="download" ><span className="material-icons">menu</span>List</button>
           <button className="wishlist" ><span className="material-icons">favorite</span>Add to Favorite</button>
           <button className="exit" ><span className="material-icons">exit_to_app</span>Exit</button>
         </div>
