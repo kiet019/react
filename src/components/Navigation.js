@@ -49,7 +49,7 @@ export default function Navigation() {
           <Link to="/account">
             <li>
               <span className="material-icons nav">manage_accounts</span>
-              <div className="text">Account</div>
+              <div className="text">Accounts</div>
             </li>
           </Link>
         </ul>

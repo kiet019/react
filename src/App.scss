@@ -2,6 +2,76 @@
 $color-logo: rgb(184, 4, 4);
 $background-color: rgb(17, 17, 17);
 $inside-color: rgb(48, 47, 47);
+* {
+  box-sizing: border-box;
+}
+.account {
+  width: 90%;
+  margin: 120px 10% 10%;
+  display: flex;
+  justify-content: space-between;
+  h3 {
+    color: white;
+  }
+  .add-user {
+    width: 25%;
+    height: 210px;
+    padding: 5px 30px 20px;
+    background-color: $inside-color;
+    border: 2px solid $color-logo;
+    border-radius: 5px;
+    #TextInput-68,
+    #TextInput-71 {
+      box-sizing: border-box;
+      border: 1px solid gray;
+      color: white;
+      padding: 5px;
+      box-shadow: none;
+      border-radius: 2px;
+    }
+    button {
+      margin-top: 0px;
+    }
+  }
+  .show-user {
+    height: auto;
+    width: 70%;
+    display: grid;
+    background-color: $inside-color;
+    border: 2px solid $color-logo;
+    border-radius: 5px;
+    .user-info {
+      color: white;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      border-bottom: 2px solid $color-logo;
+      span {
+        font-size: 50px;
+      }
+      .info {
+        font-size: 20px;
+        margin-left: 2%;
+        width: 15%;
+      }
+      ::placeholder {
+        font-size: 20px;
+      }
+      .col {
+        width: 45%;
+        margin-left: 5%;
+        #TextInput-68 {
+          font-size: 20px;
+          color: white;
+        }
+      }
+      button {
+        margin-left: 3%;
+        font-weight: 700;
+      }
+    }
+  }
+}
 .news {
   width: 90%;
   height: fit-content;
@@ -56,9 +126,8 @@ $inside-color: rgb(48, 47, 47);
   }
 }
 .about {
-  width: 100%;
-  height: 100%;
-  margin: 100px 10% 10%;
+  width: 90%;
+  margin: 120px 10% 10%;
   ul {
     margin-left: 25%;
     margin-right: 25%;
@@ -70,9 +139,8 @@ $inside-color: rgb(48, 47, 47);
   }
 }
 .contact {
-  width: 100%;
-  height: 100%;
-  margin: 100px 10% 10%;
+  width: 90%;
+  margin: 120px 10% 10%;
   h3 {
     color: white;
   }
@@ -90,7 +158,7 @@ $inside-color: rgb(48, 47, 47);
     i {
       color: white;
     }
-    ::placeholder {
+    #Textarea-146 {
       padding: 5px;
     }
     #Textarea-68,
@@ -106,11 +174,7 @@ $inside-color: rgb(48, 47, 47);
       color: white;
       font-size: medium;
     }
-
   }
-}
-* {
-  box-sizing: border-box;
 }
 input::placeholder {
   color: rgb(168, 168, 168);
@@ -155,7 +219,7 @@ img {
       border-top-left-radius: 70px;
       border-bottom-left-radius: 70px;
       border: 2px solid $color-logo;
-      border-right: none ;
+      border-right: none;
       padding-left: 10%;
       color: white;
       margin-bottom: 0px;
@@ -166,7 +230,7 @@ img {
       border-top-right-radius: 70px;
       border-bottom-right-radius: 70px;
       border: 2px solid $color-logo;
-      border-left: none ;
+      border-left: none;
       width: 20%;
       display: block;
       text-align: center;
@@ -176,7 +240,7 @@ img {
       background-color: $inside-color;
     }
   }
- .login-user {
+  .login-user {
     text-align: center;
     .login {
       font-size: 50px;

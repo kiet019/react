@@ -6,6 +6,7 @@ import Contact from "./Contact";
 import Details from './Details';
 import News from './News';
 import About from './About';
+import Account from './Account';
 
 export default function RoutesPath() {
   return (
@@ -16,6 +17,7 @@ export default function RoutesPath() {
         <Route path="/details/:type/:id" component={Details}/>
         <Route path="/news" component={News}/>
         <Route path="/about" component={About}/>
+        <Route path="/account" component={Account}/>
     </>
   )
 }
