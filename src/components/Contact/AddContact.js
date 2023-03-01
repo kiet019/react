@@ -9,8 +9,17 @@ import {
   TextInput,
 } from "react-materialize";
 import { useFormik } from "formik";
+import { addContact } from "../../features/Contacts";
+import { useDispatch } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
+
+function generateUniqueId() {
+  const uuidNumber = parseInt(uuidv4().replace(/-/g, ""), 16);
+  return uuidNumber;
+}
 
 export default function AddContact() {
+  const dispatch = useDispatch();
   const [isDisabled, setIsDisabled] = useState(true);
   const formik = useFormik({
     initialValues: {
@@ -23,7 +32,26 @@ export default function AddContact() {
       message: "",
       agree: false,
     },
-    onSubmit: (values) => {},
+    onSubmit: (values) => {
+      dispatch(
+        addContact({
+          id: generateUniqueId(),
+          fname: formik.values.fname,
+          lname: formik.values.lname,
+          email: formik.values.email,
+          phone: formik.values.phone,
+          program: formik.values.program,
+          title: formik.values.title,
+          message: formik.values.message,
+          agree: formik.values.agree
+        })
+      );
+      alert(
+        "Your contact " +
+          JSON.stringify(formik.values.title) +
+          " was sent succesfully"
+      );
+    },
     validationSchema: Yup.object({
       fname: Yup.string()
         .required("Required.")
@@ -33,17 +61,13 @@ export default function AddContact() {
         .min(2, "Must be 2 characters or more"),
       email: Yup.string().required("Required.").email("Invalid email"),
       phone: Yup.number().integer().typeError("Please enter a valid number"),
-      program: Yup.number().integer().typeError("Please select a program."),
       title: Yup.string()
         .required("Required.")
         .min(5, "Must be 5 characters or more"),
       message: Yup.string()
         .required("Required.")
         .min(10, "Must be 10 characters or more"),
-      agree: Yup.boolean().oneOf(
-        [true],
-        "The terms and conditions must be accepted."
-      ),
+      agree: Yup.boolean().oneOf([true], "Must be confirm before sending."),
     }),
   });
   useEffect(() => {
@@ -58,7 +82,7 @@ export default function AddContact() {
     }
   }, [formik.touched, formik.errors, formik.values.program]);
   return (
-    <div>
+    <div className="add-contact">
       <form onSubmit={formik.handleSubmit}>
         <div className="name">
           <Textarea
@@ -137,9 +161,9 @@ export default function AddContact() {
           onChange={formik.handleChange}
         >
           <option value="0">Please select</option>
-          <option value="1">Support</option>
-          <option value="2">Report</option>
-          <option value="3">Feedback</option>
+          <option value="Support">Support</option>
+          <option value="Report">Report</option>
+          <option value="Report">Feedback</option>
         </Select>
         <div className="error">
           {formik.touched.program && <>{formik.errors.program}</>}
@@ -175,7 +199,7 @@ export default function AddContact() {
                 id="Switch-20"
                 offLabel=""
                 onChange={function noRefCheck() {}}
-                onLabel="Agree to terms and condition"
+                onLabel="Confirm before send"
                 name="agree"
                 value={formik.values.agree}
                 onClick={formik.handleChange}

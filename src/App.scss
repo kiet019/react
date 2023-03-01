@@ -140,68 +140,85 @@ $inside-color: rgb(48, 47, 47);
   }
 }
 .contact {
-  width: 90%;
+  width: 85%;
   margin-top: 150px;
   margin-bottom: 10%;
-  h3 {
-    color: white;
-  }
-  form {
-    .error {
-      color: red;
-    }
-    .col {
-      margin: 0px;
-      svg {
-        fill: white;
-      }
-    }
-    border: 3px solid $color-logo;
-    height: fit-content;
-    border-radius: 20px;
-    padding: 2% 2% 2% 2%;
+  display: flex;
+  justify-content: space-between;
+  .add-contact {
     width: 30%;
-    background-color: $inside-color;
-    .name {
-      display: grid;
-      grid-template-columns: 5fr 1fr 5fr;
-    }
-    i {
-      color: white;
-    }
-    #Textarea-146 {
-      padding: 5px;
-    }
-    #Textarea-68,
-    #TextInput-132,
-    #TextInput-133,
-    #Textarea-146,
-    #Textarea-70,
-    .select-wrapper input.select-dropdown  {
-      background-color: rgb(0, 0, 0, 0);
-      border-bottom: 2px solid white;
-      color: white;
-      box-shadow: none;
-    }
-    label[for="Textarea-68"],
-    [for="Textarea-70"],
-    [for="TextInput-132"],
-    [for="TextInput-133"]  {
-      color: white;
-      font-size: medium;
-    }
-    .switch {
-      label {
-        color: white;
-        font-weight: 500;
-        font-size: medium;
-        input[type="checkbox"]:checked + .lever {
-          background-color: white;
-        }
-        input[type="checkbox"]:checked + .lever:after {
-          background-color: rgb(17, 212, 17);
+    form {
+      border: 2px solid $color-logo;
+      height: fit-content;
+      border-radius: 20px;
+      padding: 2% 2% 2% 2%;
+      background-color: $inside-color;
+      .error {
+        color: red;
+      }
+      .col {
+        margin: 0px;
+        svg {
+          fill: white;
         }
       }
+      .name {
+        display: grid;
+        grid-template-columns: 5fr 1fr 5fr;
+      }
+      i {
+        color: white;
+      }
+      #Textarea-146 {
+        padding: 5px;
+      }
+      #Textarea-68,
+      #TextInput-132,
+      #TextInput-133,
+      #Textarea-146,
+      #Textarea-70,
+      .select-wrapper input.select-dropdown {
+        background-color: rgb(0, 0, 0, 0);
+        border-bottom: 2px solid white;
+        color: white;
+        box-shadow: none;
+      }
+      label[for="Textarea-68"],
+      [for="Textarea-70"],
+      [for="TextInput-132"],
+      [for="TextInput-133"] {
+        color: white;
+        font-size: medium;
+      }
+      .switch {
+        label {
+          color: white;
+          font-weight: 500;
+          font-size: medium;
+          input[type="checkbox"]:checked + .lever {
+            background-color: white;
+          }
+          input[type="checkbox"]:checked + .lever:after {
+            background-color: rgb(17, 212, 17);
+          }
+        }
+      }
+    }
+  }
+  .show-contact {
+    width: 65%;
+    height: fit-content;
+    background-color: $inside-color;
+    border: 2px solid $color-logo;
+    border-radius: 5px;
+    .contact-info {
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      height: auto;
+      display: grid;
+      padding: 5px 20px 20px;
+      border-bottom: 2px solid $color-logo;
     }
   }
 }
@@ -330,6 +347,7 @@ img {
     }
   }
 }
+
 .navigation {
   float: left;
   height: inherit;
