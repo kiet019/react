@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 let UserData = require("../shared/ListOfUsers.json");
-export const userSlice = createSlice({
+const userSlice = createSlice({
   name: "users",
   initialState: { value: UserData },
   reducers: {
