@@ -76,7 +76,7 @@ $inside-color: rgb(48, 47, 47);
 .news {
   width: 90%;
   height: fit-content;
-  margin-top: 120px;
+  margin-top: 150px;
   .title {
     padding-left: 5%;
     color: white;
@@ -147,11 +147,18 @@ $inside-color: rgb(48, 47, 47);
     color: white;
   }
   form {
+    .col {
+      margin: 0px;
+      svg {
+        fill: white;
+      }
+    }
     border: 3px solid $color-logo;
     height: fit-content;
     border-radius: 20px;
-    padding: 0px 2% 2% 2%;
+    padding: 2% 2% 2% 2%;
     width: 30%;
+    background-color: $inside-color;
     .name {
       display: grid;
       grid-template-columns: 5fr 1fr 5fr;
@@ -164,23 +171,31 @@ $inside-color: rgb(48, 47, 47);
     }
     #Textarea-68,
     #TextInput-132,
-    #Textarea-146 {
+    #TextInput-133,
+    #Textarea-146,
+    .select-wrapper input.select-dropdown  {
       background-color: rgb(0, 0, 0, 0);
       border-bottom: 2px solid white;
       color: white;
       box-shadow: none;
     }
     label[for="Textarea-68"],
-    [for="TextInput-132"] {
+    [for="TextInput-132"],
+    [for="TextInput-133"]  {
       color: white;
       font-size: medium;
     }
     .switch {
-      label input[type=checkbox]:checked+.lever {
-        background-color: red;
-      }
-      label input[type=checkbox]:checked+.lever:after {
-        background-color: #06d85f;
+      label {
+        color: white;
+        font-weight: 500;
+        font-size: medium;
+        input[type="checkbox"]:checked + .lever {
+          background-color: white;
+        }
+        input[type="checkbox"]:checked + .lever:after {
+          background-color: rgb(17, 212, 17);
+        }
       }
     }
   }
@@ -380,15 +395,15 @@ img {
   }
 }
 .home {
-  margin-top: 100px;
+  margin-top: 150px;
   width: 90%;
   .banner {
     padding-left: 5%;
     padding-right: 5%;
     width: 100%;
+    margin-bottom: 20px;
     position: relative;
     height: 500px;
-    margin-top: 50px;
     .container {
       max-width: 10000px;
       width: 100%;
@@ -505,7 +520,7 @@ img {
     }
   }
   .films-container {
-    margin-top: 20px;
+    margin-bottom: 20px;
     .title {
       padding-left: 5%;
       color: white;
