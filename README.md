@@ -7,4 +7,5 @@ npm install @reduxjs/toolkit react-redux
 npm install -S yup
 npm install formik --save
 npm install react-phone-number-input --save
+ npm install formik yup --force
 -->
