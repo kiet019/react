@@ -140,17 +140,16 @@ $inside-color: rgb(48, 47, 47);
 }
 .contact {
   width: 90%;
-  margin: 120px 10% 10%;
+  margin-top: 150px;
   h3 {
     color: white;
   }
   form {
     border: 3px solid $color-logo;
-    margin-left: 25%;
-    margin-right: 25%;
     height: fit-content;
     border-radius: 20px;
-    padding: 0px 5% 2% 5%;
+    padding: 0px 2% 2% 2%;
+    width: 30%;
     .name {
       display: grid;
       grid-template-columns: 5fr 1fr 5fr;
@@ -173,6 +172,14 @@ $inside-color: rgb(48, 47, 47);
     [for="TextInput-132"] {
       color: white;
       font-size: medium;
+    }
+    .switch {
+      label input[type=checkbox]:checked+.lever {
+        background-color: red;
+      }
+      label input[type=checkbox]:checked+.lever:after {
+        background-color: #06d85f;
+      }
     }
   }
 }

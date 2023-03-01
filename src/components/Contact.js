@@ -1,16 +1,26 @@
 import React, { useEffect } from "react";
-import { Button, Icon, Textarea, TextInput } from "react-materialize";
+import { Button, Icon, Switch, Textarea, TextInput } from "react-materialize";
+import { useFormik } from "formik";
 
 export default function Contact() {
+  const formik = useFormik({
+    initialValues: {
+      fname: "",
+      lname: "",
+      phone: "",
+      program: 0,
+      message: "",
+      agree: false,
+    },
+  });
   useEffect(() => {
     window.scrollTo(0, 0);
   });
-  const handleSubmit =(e)=> {
-    e.preventDefault()
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="contact" onSubmit={handleSubmit}>
-      <h3>Contact Us</h3>
       <form action="#" method="post">
         <div className="name">
           <Textarea id="Textarea-68" label="First Name" />
@@ -30,16 +40,22 @@ export default function Contact() {
           placeholder="Description"
           rows={5}
         />
-        <div className="button" style={{textAlign: "right"}}>
-          <Button
-            node="button"
-            type="submit"
-            waves="light"
-            style={{backgroundColor: "rgb(184, 4, 4)" }}
-          >
-            Submit
-            <Icon right>send</Icon>
-          </Button>
+        <div className="button" style={{ textAlign: "right" }}>
+          <div style={{display: "flex", justifyContent: "space-between"}}> 
+            <Switch
+              id="Switch-20"
+              onChange={function noRefCheck() {}}
+            />
+            <Button
+              node="button"
+              type="submit"
+              waves="light"
+              style={{ backgroundColor: "rgb(184, 4, 4)" }}
+            >
+              Submit
+              <Icon right>send</Icon>
+            </Button>
+          </div>
         </div>
       </form>
     </div>
