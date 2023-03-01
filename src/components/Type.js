@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import FilmsShow from './FilmsShow';
+import FilmsShow from './Modal/FilmsShow';
 import { useParams } from 'react-router-dom'
 let ListOfFilms = require("../shared/ListOfFilms.json")
 

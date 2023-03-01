@@ -1,12 +1,19 @@
 import "./App.scss";
-import Main from "./components/Main";
-
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Navigation from "./components/Navigation";
+import RoutesPath from "./components/RoutesPath";
 
 function App() {
   return (
-    <div className="App">
-        <Main />
-    </div>
+    <>
+      <div className="App">
+        <Header />
+        <Navigation />
+        <RoutesPath />
+      </div>
+      <Footer />
+    </>
   );
 }
 

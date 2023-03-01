@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { SwitchContext } from "./SwitchContext";
+import { SwitchContext } from "../Context/SwitchContext";
 
 export default function Banner() {
   const { index, banners, back, next } = useContext(SwitchContext);

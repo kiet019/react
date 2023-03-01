@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Icon } from "react-materialize";
 import { useParams } from "react-router-dom";
 import ModalCase from "./ModalCase";
-let ListOfFilms = require("../shared/ListOfFilms.json");
+let ListOfFilms = require("../../shared/ListOfFilms.json");
 
 export default function Details() {
   const [isOpen, setIsOpen] = useState(false);

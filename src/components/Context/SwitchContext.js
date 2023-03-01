@@ -7,7 +7,7 @@ const initialState = {
 };
 const SwitchContext = React.createContext(initialState);
 function SwitchProvider({ children }) {
-    let banners = require("../shared/ListOfBanners.json");
+    let banners = require("../../shared/ListOfBanners.json");
     const [index, setIndex] = useState(1);
   useEffect(() => {
     if(index <=0 || index>= banners.length-1) {

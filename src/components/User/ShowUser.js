@@ -3,7 +3,7 @@ import { Button, TextInput } from "react-materialize";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { deleteUser, updateUsername } from "../features/Users";
+import { deleteUser, updateUsername } from "../../features/Users";
 
 export default function ShowUser() {
   const dispatch = useDispatch();

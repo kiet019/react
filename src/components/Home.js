@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import Banner from './Banner'
-import FilmsShow from './FilmsShow'
+import Banner from './Modal/Banner'
+import FilmsShow from './Modal/FilmsShow'
 let ListOfFilms = require("../shared/ListOfFilms.json");
 
 export default function Home() {

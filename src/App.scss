@@ -147,6 +147,9 @@ $inside-color: rgb(48, 47, 47);
     color: white;
   }
   form {
+    .error {
+      color: red;
+    }
     .col {
       margin: 0px;
       svg {
@@ -173,6 +176,7 @@ $inside-color: rgb(48, 47, 47);
     #TextInput-132,
     #TextInput-133,
     #Textarea-146,
+    #Textarea-70,
     .select-wrapper input.select-dropdown  {
       background-color: rgb(0, 0, 0, 0);
       border-bottom: 2px solid white;
@@ -180,6 +184,7 @@ $inside-color: rgb(48, 47, 47);
       box-shadow: none;
     }
     label[for="Textarea-68"],
+    [for="Textarea-70"],
     [for="TextInput-132"],
     [for="TextInput-133"]  {
       color: white;
@@ -204,7 +209,7 @@ input::placeholder {
   color: rgb(168, 168, 168);
   font-size: medium;
 }
-.main {
+.App {
   display: flex;
   background-color: $background-color;
 }

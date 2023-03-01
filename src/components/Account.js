@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import AddUser from './AddUser'
-import ShowUser from './ShowUser'
+import AddUser from './User/AddUser'
+import ShowUser from './User/ShowUser'
 
 export default function Account() {
   useEffect(() => {
