@@ -38,7 +38,12 @@ export default function ShowUser() {
           <Button
             style={{ backgroundColor: "rgb(184, 4, 4)" }}
             onClick={() => {
-              dispatch(deleteUser({ id: user.id }));
+              if (window.confirm("You sure to want to delete this user") === true) {
+                dispatch(deleteUser({ id: user.id }));
+                alert("Delete success")
+              } else {
+                alert("Delete fail")
+              }
             }}
           >
             Delete

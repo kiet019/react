@@ -43,7 +43,9 @@ export default function AddContact() {
           program: formik.values.program,
           title: formik.values.title,
           message: formik.values.message,
-          agree: formik.values.agree
+          agree: formik.values.agree,
+          status: "",
+          note: ""
         })
       );
       alert(

@@ -183,13 +183,6 @@ $inside-color: rgb(48, 47, 47);
         color: white;
         box-shadow: none;
       }
-      label[for="Textarea-68"],
-      [for="Textarea-70"],
-      [for="TextInput-132"],
-      [for="TextInput-133"] {
-        color: white;
-        font-size: medium;
-      }
       .switch {
         label {
           color: white;
@@ -214,11 +207,23 @@ $inside-color: rgb(48, 47, 47);
     .contact-info {
       color: white;
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 300;
       height: auto;
       display: grid;
-      padding: 5px 20px 20px;
+      padding: 5px 20px 0px;
       border-bottom: 2px solid $color-logo;
+      line-height: 28px;
+      div {
+        margin-bottom: 15px;
+      }
+      .update-contact {
+        .col {
+          margin: 0px;
+        }
+        button {
+          background-color: rgb(32, 233, 32);
+        }
+      }
     }
   }
 }
