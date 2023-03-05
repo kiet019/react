@@ -6,10 +6,14 @@ export default function Banner() {
   const { index, banners, back, next } = useContext(SwitchContext);
   return (
     <div className="banner">
-      <div className="container">
+      {banners.length > 0 ? (<div className="container">
         <img src={banners[index].image} alt="" />
-         {/* eslint-disable-next-line  */}
-        <a className="video" href={banners[index].trailer} target="_blank">
+        {/* eslint-disable-next-line  */}
+        <a
+          className="video"
+          href={banners.length && banners[index].trailer}
+          target="_blank"
+        >
           <div className="circle"></div>
           <span className="material-icons play">play_arrow</span>
         </a>
@@ -29,7 +33,7 @@ export default function Banner() {
             </button>
           </div>
         </div>
-      </div>
+      </div>) : null}
     </div>
   );
 }
