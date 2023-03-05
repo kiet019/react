@@ -13,6 +13,7 @@ export default function ShowContact() {
   const dispatch = useDispatch();
   // Lấy danh sách contact từ state
   const contactList = useSelector((state) => state.contacts.value);
+  const [APIData, setAPIData] = useState();
   const fetchContacts = () => {
     fetch(baseURL)
       .then((response) => {
@@ -22,13 +23,7 @@ export default function ShowContact() {
         return response.json();
       })
       .then((data) => {
-        if (data.length !== 0) {
-          data.forEach((element) => {
-            if (contactList.length === 0) {
-              dispatch(addContact(element))
-            }
-          });
-        }
+        setAPIData(data);
       })
       .catch((error) => console.log(error));
   };
@@ -39,6 +34,19 @@ export default function ShowContact() {
 
   return (
     <div className="show-contact">
+      <Button
+        onClick={() => {
+          APIData.forEach(element => {
+            if (contactList.find((contact) => {
+              return contact.id === element.id
+            }) === undefined) {
+              dispatch(addContact(element))
+            }
+          });
+        }}
+      >
+        hello
+      </Button>
       {contactList.map((contact) => (
         <div className="contact-info" key={contact.id}>
           <div
