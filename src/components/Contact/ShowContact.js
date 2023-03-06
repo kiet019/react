@@ -30,21 +30,20 @@ export default function ShowContact() {
   // Hàm để lấy danh sách contact từ API
   useEffect(() => {
     fetchContacts();
+    
   }, []);
 
   return (
     <div className="show-contact">
-      <Button
-        onClick={() => {
-          APIData.forEach(element => {
-            if (contactList.find((contact) => {
-              return contact.id === element.id
-            }) === undefined) {
-              dispatch(addContact(element))
-            }
-          });
-        }}
-      >
+      <Button onClick={() => {
+        APIData.forEach(element => {
+          if (contactList.find((contact) => {
+            return contact.id === element.id
+          }) === undefined) {
+            dispatch(addContact(element))
+          }
+        })
+      }}>
         hello
       </Button>
       {contactList.map((contact) => (
