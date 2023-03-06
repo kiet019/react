@@ -10,11 +10,11 @@ const baseURL = `https://64048c453bdc59fa8f3b5897.mockapi.io/api/films/contact`;
 
 export default function ShowContact() {
   const [note, setNote] = useState("");
+  const [APIData, setAPIData] = useState([]);
   const dispatch = useDispatch();
   // Lấy danh sách contact từ state
   const contactList = useSelector((state) => state.contacts.value);
-  const [APIData, setAPIData] = useState();
-  const fetchContacts = () => {
+  function fetchContacts() {
     fetch(baseURL)
       .then((response) => {
         if (!response.ok) {
@@ -26,26 +26,20 @@ export default function ShowContact() {
         setAPIData(data);
       })
       .catch((error) => console.log(error));
-  };
+  }
   // Hàm để lấy danh sách contact từ API
   useEffect(() => {
     fetchContacts();
-    
+    // eslint-disable-next-line
   }, []);
 
   return (
     <div className="show-contact">
-      <Button onClick={() => {
-        APIData.forEach(element => {
-          if (contactList.find((contact) => {
-            return contact.id === element.id
-          }) === undefined) {
-            dispatch(addContact(element))
-          }
-        })
-      }}>
-        hello
-      </Button>
+      {contactList.length === 0
+        ? APIData.forEach((element) => {
+            dispatch(addContact(element));
+          })
+        : null}
       {contactList.map((contact) => (
         <div className="contact-info" key={contact.id}>
           <div

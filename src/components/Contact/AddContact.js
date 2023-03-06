@@ -32,7 +32,7 @@ export default function AddContact() {
       message: "",
       agree: false,
     },
-    onSubmit: (values) => {
+    onSubmit: () => {
       dispatch(
         addContact({
           id: generateUniqueId(),
