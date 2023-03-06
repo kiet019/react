@@ -32,14 +32,16 @@ export default function ShowContact() {
     fetchContacts();
     // eslint-disable-next-line
   }, []);
-
+  useEffect(() => {
+    if (contactList.length === 0) {
+      APIData.forEach((element) => {
+        dispatch(addContact(element));
+      });
+    }
+  }, [APIData, contactList.length, dispatch]);
+  
   return (
     <div className="show-contact">
-      {contactList.length === 0
-        ? APIData.forEach((element) => {
-            dispatch(addContact(element));
-          })
-        : null}
       {contactList.map((contact) => (
         <div className="contact-info" key={contact.id}>
           <div
