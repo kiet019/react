@@ -11,6 +11,7 @@ const baseURL = `https://64048c453bdc59fa8f3b5897.mockapi.io/api/films/contact`;
 export default function ShowContact() {
   const [note, setNote] = useState("");
   const [APIData, setAPIData] = useState([]);
+  const [isCalled, setIsCalled] = useState(false);
   const dispatch = useDispatch();
   // Lấy danh sách contact từ state
   const contactList = useSelector((state) => state.contacts.value);
@@ -33,13 +34,13 @@ export default function ShowContact() {
     // eslint-disable-next-line
   }, []);
   useEffect(() => {
-    if (contactList.length === 0) {
+    if (contactList.length === 0 && !isCalled) {
       APIData.forEach((element) => {
         dispatch(addContact(element));
       });
     }
-  }, [APIData, contactList.length, dispatch]);
-  
+  }, [APIData, contactList.length, dispatch, isCalled]);
+
   return (
     <div className="show-contact">
       {contactList.map((contact) => (
@@ -71,6 +72,7 @@ export default function ShowContact() {
                   true
                 ) {
                   dispatch(deleteContact({ id: contact.id }));
+                  setIsCalled(true)
                   alert("Delete success");
                 } else {
                   alert("Delete fail");
@@ -109,6 +111,7 @@ export default function ShowContact() {
                 dispatch(
                   updateContact({ id: contact.id, note: note, status: true })
                 );
+                setIsCalled(true)
               }}
             >
               Update
