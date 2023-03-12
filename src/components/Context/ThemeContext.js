@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import React from 'react'
 const themes = {
-  dark: {
+  light: {
     backgroundColor: "rgb(17,17,17)",
   },
-  light: {
+  dark: {
     backgroundColor: "white",
   },
 };
